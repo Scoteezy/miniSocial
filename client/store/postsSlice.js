@@ -88,7 +88,7 @@ const postsSlice = createSlice({
             state.error = null;
         },
         [fetchAllPostsById.fulfilled]:(state,action)=>{
-            state.status = 'resolver';
+            state.status = 'resolved';
             state.posts = action.payload;
         },
         [fetchAllPostsById.rejected]:setError,
